@@ -1,4 +1,164 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     console.log('Welcome to Roe and Sons website!');
-    // Add your JavaScript interactive code here
+
+    try {
+        const response = await fetch('gallery.json');
+        const galleryData = await response.json();
+        
+        const galleryContainer = document.getElementById('gallery-grid');
+        if (!galleryContainer) return;
+        
+        // Check if there is a limit set on the container (e.g. data-limit="3" on the homepage)
+        const limitAttr = galleryContainer.getAttribute('data-limit');
+        const limit = limitAttr ? parseInt(limitAttr, 10) : galleryData.length;
+
+        // Only take up to 'limit' items from the array
+        const itemsToShow = galleryData.slice(0, limit);
+
+        itemsToShow.forEach((item, index) => {
+        let html = '';
+
+        if (item.type === 'image') {
+            html = `
+                <a href="${item.src}" 
+                   class="gallery-item" 
+                   data-pswp-width="${item.width}" 
+                   data-pswp-height="${item.height}" 
+                   target="_blank">
+                    <img src="${item.src}" alt="${item.title}" />
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-title">${item.title}</div>
+                        <div class="gallery-item-desc">${item.description}</div>
+                    </div>
+                </a>
+            `;
+        } else if (item.type === 'video') {
+             html = `
+                <a href="#" 
+                   class="gallery-item video-item" 
+                   data-video-url="${item.videoUrl}"
+                   data-pswp-type="custom"
+                   data-pswp-width="1280" 
+                   data-pswp-height="720">
+                    <img src="${item.thumbnail}" alt="${item.title}" />
+                    
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40pt; color: white; opacity: 0.8;">▶</div>
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-title">${item.title}</div>
+                        <div class="gallery-item-desc">${item.description}</div>
+                    </div>
+                </a>
+            `;
+        }
+
+        galleryContainer.innerHTML += html;
+    });
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery-grid',
+        children: '.gallery-item',
+        pswpModule: PhotoSwipe
+    });
+
+    lightbox.on('uiRegister', function() {
+      lightbox.pswp.ui.registerElement({
+        name: 'custom-caption',
+        order: 9,
+        isButton: false,
+        appendTo: 'root',
+        html: 'Caption text',
+        onInit: (el, pswp) => {
+          lightbox.pswp.on('change', () => {
+            const currSlideElement = lightbox.pswp.currSlide.data.element;
+            let captionText = '';
+            if (currSlideElement) {
+                // Get title and desc from our custom HTML
+                const title = currSlideElement.querySelector('.gallery-item-title').innerHTML;
+                const desc = currSlideElement.querySelector('.gallery-item-desc').innerHTML;
+                captionText = `<strong>${title}</strong><br>${desc}`;
+            }
+            el.innerHTML = captionText || '';
+            if (captionText) {
+                el.style.display = 'block';
+            } else {
+                el.style.display = 'none';
+            }
+          });
+        }
+      });
+    });
+
+    lightbox.addFilter('itemData', (itemData, index) => {
+        const element = itemData.element;
+        if (element && element.dataset.videoUrl) {
+            itemData.html = `
+                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <iframe src="${element.dataset.videoUrl}" width="100%" height="100%" style="max-width: 1280px; max-height: 720px; border: none;" allow="autoplay; fullscreen"></iframe>
+                </div>
+            `;
+        }
+        return itemData;
+    });
+
+    lightbox.init();
+
+    } catch (error) {
+        console.error('Error loading gallery data:', error);
+    }
+
+    // === Contact Form Logic (Web3Forms) ===
+    const form = document.getElementById('contact-form');
+    const result = document.getElementById('form-result');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Custom Email Validation
+            const emailInput = document.getElementById('email').value;
+            // Regex to check for a valid format (e.g. name@domain.com)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(emailInput)) {
+                result.innerHTML = "Please enter a valid email address so we can reply to you.";
+                result.style.color = "red";
+                // Focus the email field so they know where the error is
+                document.getElementById('email').focus();
+                return; // Stop form from submitting
+            }
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            result.innerHTML = "Sending your message... Please wait.";
+            result.style.color = "var(--navy)";
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "Success! Thank you for contacting us. We will reach out to you soon.";
+                    result.style.color = "var(--green)";
+                    form.reset();
+                } else {
+                    console.log(response);
+                    result.innerHTML = "Sorry, something went wrong. Please call us instead.";
+                    result.style.color = "red";
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Sorry, something went wrong. Please call us instead.";
+                result.style.color = "red";
+            });
+        });
+    }
 });

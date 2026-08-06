@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roe and Sons</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
 </head>
 <body>
     <div id="header">
@@ -16,9 +17,10 @@
             </div>
 
             <div id="header-buttons">
+                <a href="/">Home</a>
                 <a href="/our-work">Our Work</a>
-                <a href="#our-services">Our Services</a>
-                <a href="#contact-us">Contact Us</a>
+                <a href="/#our-services">Our Services</a>
+                <a href="/#contact-us">Contact Us</a>
             </div>
         </div>
     </div>
@@ -38,8 +40,93 @@
         <p>ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • </p>
     </div>
 
-    
+    <!-- Trust Banner (Key Info) -->
+    <div id="trust-banner">
+        <div class="trust-item"><span>✓</span> Local & Established Family Business</div>
+        <div class="trust-item"><span>✓</span> Fully Insured</div>
+        <div class="trust-item"><span>✓</span> Free Quotes</div>
+        <div class="trust-item"><span>✓</span> Serving All Cemeteries</div>
+        <div class="trust-item"><span>✓</span> Distance is No Object</div>
+    </div>
 
+    <div id="our-services">
+        <h1>Our Services</h1>
+        <div id="container">
+            <div id="left">
+                <ul>
+                    <li>Memorial Restoration & Maintenance</li>
+                    <li>Headstone Cleaning & Re-lettering</li>
+                    <li>Grave Renovation & Structural Repairs</li>
+                </ul>
+            </div>
+            <div id="right">
+                <ul>
+                    <li>Ongoing Maintenance Service</li>
+                    <li>Monumental Sculpting & Stonemasonry</li>
+                    <li>Additional Inscriptions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="divider">
+        <p>ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • </p>
+    </div>
+
+    <div id="our-work">
+        <div id="container">
+            <h1 style="text-align: center;">Our Work</h1>
+            <div id="gallery-grid" class="pswp-gallery" data-limit="6"></div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="our-work.html">
+                    <button class="button-outline">See more</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="divider">
+        <p>ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • ESTABLISHED 1940 • </p>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contact-us">
+        <div id="container">
+            <h1>Contact Us</h1>
+            <p class="contact-intro">Please fill out the form below, or call us directly at <strong>086 355 5359</strong>.</p>
+            
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Get your free access key from web3forms.com and paste it below -->
+                <input type="hidden" name="access_key" value="d784656b-0ba0-44c9-93b8-74ec26dfde5f">
+                
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Your Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">How can we help you?</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Send Message</button>
+                <div id="form-result"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/photoswipe@5/dist/umd/photoswipe.umd.min.js"></script>
+    <script src="https://unpkg.com/photoswipe@5/dist/umd/photoswipe-lightbox.umd.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
