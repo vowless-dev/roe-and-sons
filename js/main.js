@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                    data-pswp-height="720">
                     <img src="${item.thumbnail}" alt="${item.title}" />
                     
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40pt; color: white; opacity: 0.8;">▶</div>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3.3333rem; color: white; opacity: 0.8;">▶</div>
                     <div class="gallery-item-info">
                         <div class="gallery-item-title">${item.title}</div>
                         <div class="gallery-item-desc">${item.description}</div>
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (element && element.dataset.videoUrl) {
             itemData.html = `
                 <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                    <iframe src="${element.dataset.videoUrl}" width="100%" height="100%" style="max-width: 1280px; max-height: 720px; border: none;" allow="autoplay; fullscreen"></iframe>
+                    <iframe src="${element.dataset.videoUrl}" width="100%" height="100%" style="max-width: 80rem; max-height: 45rem; border: none;" allow="autoplay; fullscreen"></iframe>
                 </div>
             `;
         }

@@ -5,18 +5,18 @@ body * {
 #our-work-page-header {
     text-align: center;
     font-weight: 600;
-    font-size: 50pt;
-    margin-top: 60px;
+    font-size: 4.1667rem;
+    margin-top: 3.75rem;
 }
 
 #our-work-page-container {
-    padding: 20px 40px 80px 40px;
-    max-width: 1400px;
+    padding: 1.25rem 2.5rem 5rem 2.5rem;
+    max-width: 87.5rem;
     margin: 0 auto;
 }
 
 /* Override the grid to show larger images on the dedicated page */
 #gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(21.875rem, 1fr));
+    gap: 1.875rem;
 }
