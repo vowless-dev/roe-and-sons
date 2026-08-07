@@ -46,18 +46,6 @@ img {
     border-radius: 0.3125rem;
 }
 
-/* div {
-    border: var(--gold-secondary);
-    border-width: 1px;
-    border-style: dashed;
-}
-
-div > * {
-    border: var(--gold-secondary);
-    border-width: 1px;
-    border-style: dashed;
-} */
-
 #header {
     background-color: var(--tan-secondary);
     display: flex;
@@ -102,7 +90,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6.25rem;
+    gap: 2rem;
 }
 
 #header-buttons > a {
@@ -121,7 +109,8 @@ a {
 }
 
 #hero-left {
-    margin-left: 12.5rem;
+    margin-left: 2rem;
+    flex: 1;
     min-height: 25rem;
     display: flex;
     flex-direction: column;
@@ -133,7 +122,7 @@ a {
     font-family: "UnifrakturMaguntia", cursive;
     font-weight: 400;
     color: var(--tan-primary);
-    font-size: 6.6667rem;
+    font-size: 4.5rem;
 }
 
 h1 {
@@ -189,8 +178,9 @@ button:active {
 
 #hero-right > img {
     min-height: 37.5rem;
-    margin: 0;
-    margin-left: 3.75rem;
+    margin: 0 auto;
+    max-width: 100%;
+    object-fit: contain;
     -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
@@ -200,7 +190,8 @@ button:active {
     display: flex;
     justify-content: stretch;
     align-items: stretch;
-    text-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #divider > p {
@@ -509,4 +500,134 @@ strong {
 
 #footer #header-name h2 {
     font-size: 24pt;
+}
+
+@media (max-width: 68rem) {
+    #header-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+    
+    #header-buttons {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    #header-buttons > a {
+        font-size: 1.3rem;
+    }
+
+    
+    #hero {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        min-height: auto;
+    }
+    
+    #hero-left {
+        margin-left: 0;
+        padding: 0 1.5rem;
+        align-items: center;
+        text-align: center;
+        min-height: auto;
+        margin-bottom: 2rem;
+    }
+    
+    #hero-left > h1 {
+        font-size: 3.8rem;
+        line-height: 1.1;
+    }
+    
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    #hero-left > p {
+        margin-left: 0;
+        max-width: 100%;
+        font-size: 1.4rem;
+    }
+    
+    #hero-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #hero-right > img {
+        margin: 0 auto;
+        width: 80%;
+        min-height: auto;
+        display: block;
+    }
+
+    
+    #divider > p {
+        font-size: 1.4rem;
+    }
+
+    
+    #trust-banner {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+    
+    .trust-item {
+        font-size: 1.3rem;
+    }
+
+    
+    #our-services > #container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    #our-services li {
+        font-size: 1.3rem;
+    }
+
+    
+    #gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+    
+    #our-work #container {
+        padding: 2rem 1rem;
+    }
+
+    
+    #contact-us {
+        padding: 2rem 1rem;
+    }
+    
+    #contact-us > #container {
+        padding: 1.5rem;
+    }
+    
+    #contact-us > #container h1 {
+        font-size: 2.5rem;
+    }
+    
+    .submit-button {
+        width: 100%;
+    }
+
+    
+    #footer {
+        align-items: center;
+    }
+    #footer ul {
+        margin-left: 0;
+        padding: 0;
+        text-align: center;
+    }
+    #footer li {
+        font-size: 1.2rem;
+    }
 }
