@@ -333,6 +333,7 @@ button:active {
     font-size: 2.1667rem;
     font-weight: bold;
     line-height: 1;
+    flex-shrink: 0; /* Prevents the checkmark from squishing on small screens */
 }
 
 #our-services {
@@ -582,15 +583,24 @@ strong {
         font-size: 1.3rem;
     }
 
-    
     #our-services > #container {
         flex-direction: column;
         gap: 2rem;
+        text-align: center;
+    }
+
+    #our-services ul {
+        padding-left: 0;
     }
     
     #our-services li {
         font-size: 1.3rem;
+        list-style-position: inside;
     }
+
+
+
+
 
     
     #gallery-grid {
