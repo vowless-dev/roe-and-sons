@@ -7,12 +7,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const galleryContainer = document.getElementById('gallery-grid');
         if (!galleryContainer) return;
-        
-        // Check if there is a limit set on the container (e.g. data-limit="3" on the homepage)
+
         const limitAttr = galleryContainer.getAttribute('data-limit');
         const limit = limitAttr ? parseInt(limitAttr, 10) : galleryData.length;
 
-        // Only take up to 'limit' items from the array
         const itemsToShow = galleryData.slice(0, limit);
 
         itemsToShow.forEach((item, index) => {
@@ -72,7 +70,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             const currSlideElement = lightbox.pswp.currSlide.data.element;
             let captionText = '';
             if (currSlideElement) {
-                // Get title and desc from our custom HTML
                 const title = currSlideElement.querySelector('.gallery-item-title').innerHTML;
                 const desc = currSlideElement.querySelector('.gallery-item-desc').innerHTML;
                 captionText = `<strong>${title}</strong><br>${desc}`;
@@ -106,7 +103,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error loading gallery data:', error);
     }
 
-    // === Contact Form Logic (Web3Forms) ===
+    // Contact form
     const form = document.getElementById('contact-form');
     const result = document.getElementById('form-result');
 
@@ -114,17 +111,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Custom Email Validation
             const emailInput = document.getElementById('email').value;
-            // Regex to check for a valid format (e.g. name@domain.com)
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             
             if (!emailRegex.test(emailInput)) {
                 result.innerHTML = "Please enter a valid email address so we can reply to you.";
                 result.style.color = "red";
-                // Focus the email field so they know where the error is
+                
                 document.getElementById('email').focus();
-                return; // Stop form from submitting
+                return;
             }
 
             const formData = new FormData(form);

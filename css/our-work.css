@@ -15,7 +15,6 @@ body * {
     margin: 0 auto;
 }
 
-/* Override the grid to show larger images on the dedicated page */
 #gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(21.875rem, 1fr));
     gap: 1.875rem;
