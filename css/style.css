@@ -530,6 +530,7 @@ strong {
         align-items: center;
         padding-top: 2rem;
         min-height: auto;
+        gap: 0;
     }
     
     #hero-left {
@@ -539,6 +540,7 @@ strong {
         text-align: center;
         min-height: auto;
         margin-bottom: 2rem;
+        flex: 0 1 auto;
     }
     
     #hero-left > h1 {
@@ -560,12 +562,13 @@ strong {
         width: 100%;
         display: flex;
         justify-content: center;
+        flex: 0 1 auto;
     }
     
     #hero-right > img {
         margin: 0 auto;
         width: 80%;
-        min-height: auto;
+        height: auto;
         display: block;
     }
 
