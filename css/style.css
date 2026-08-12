@@ -104,13 +104,13 @@ a {
     justify-content: center;
     min-height: 34.375rem;
     background-color: var(--green);
+    background-image: url("../assets/background.png");
     padding-top: 3.125rem;
     gap: 4rem;
 }
 
-#hero-left {
+#hero > #container {
     margin-left: 0;
-    flex: 0 1 35rem;
     min-height: 25rem;
     display: flex;
     flex-direction: column;
@@ -119,11 +119,11 @@ a {
     margin-bottom: 3.125rem;
 }
 
-#hero-left > h1 {
+#hero > #container > h1 {
     font-family: "UnifrakturMaguntia", cursive;
     font-weight: 400;
     color: var(--tan-primary);
-    font-size: 4.5rem;
+    font-size: 8rem;
 }
 
 h1 {
@@ -133,15 +133,16 @@ h1 {
     font-size: 4.1667rem;
 }
 
-#hero-left > p {
-    margin-left: 1.25rem;
+#hero > #container > p {
+    align-self: center;
     color: var(--tan-secondary);
-    font-size: 1.5833rem;
+    font-size: 1.6rem;
     max-width: 90%;
 }
 
-#hero-left > button {
+#hero > #container > button {
     max-width: 12.5rem;
+    align-self: center;
 }
 
 button {
@@ -168,26 +169,6 @@ button:active {
     box-shadow: 0 2px 0.25rem rgba(0, 0, 0, 0.2);
 }
 
-#hero-right {
-    justify-self: stretch;
-    align-self: stretch;
-    flex: 0 1 35rem;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    overflow: hidden;
-}
-
-#hero-right > img {
-    height: 45rem;
-    width: 100%;
-    margin: 0 auto;
-    object-fit: cover;
-    object-position: top center;
-    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-}
-
 #divider {
     background-color: var(--green);
     display: flex;
@@ -207,7 +188,7 @@ button:active {
 }
 
 #our-work {
-    background-color: var(--green)
+    background-image: url("../assets/background.png");
 }
 
 #our-work * {
@@ -319,7 +300,7 @@ button:active {
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
-    border-bottom: 2px dashed var(--gold-secondary);
+    border-bottom: 2px solid var(--gold-secondary);
 }
 
 .trust-item {
@@ -533,7 +514,7 @@ strong {
         gap: 0;
     }
     
-    #hero-left {
+    #hero > #container {
         margin-left: 0;
         padding: 0 1.5rem;
         align-items: center;
@@ -543,8 +524,8 @@ strong {
         flex: 0 1 auto;
     }
     
-    #hero-left > h1 {
-        font-size: 3.8rem;
+    #hero > #container > h1 {
+        font-size: 4rem;
         line-height: 1.1;
     }
     
@@ -552,26 +533,11 @@ strong {
         font-size: 2.8rem;
     }
     
-    #hero-left > p {
+    #hero > #container > p {
         margin-left: 0;
         max-width: 100%;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
-    
-    #hero-right {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex: 0 1 auto;
-    }
-    
-    #hero-right > img {
-        margin: 0 auto;
-        width: 80%;
-        height: auto;
-        display: block;
-    }
-
     
     #divider > p {
         font-size: 1.4rem;
