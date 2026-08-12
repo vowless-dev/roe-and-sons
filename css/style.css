@@ -373,6 +373,8 @@ ul {
 #contact-us {
     background-color: var(--tan-primary);
     padding: 3.75rem 1.25rem;
+    position: relative;
+    overflow: hidden;
 }
 
 #contact-us > #container {
@@ -382,6 +384,8 @@ ul {
     background-color: var(--tan-secondary);
     border: 2px solid var(--gold-secondary);
     border-radius: 0;
+    position: relative;
+    z-index: 1;
 }
 
 #contact-us > #container h1 {
@@ -488,9 +492,33 @@ strong {
 }
 
 #sketch {
-    background-image: url(../assets/sketch.png);
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    line-height: 0;
+}
+
+#sketch img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#contact-us > #sketch {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    pointer-events: none;
+    margin: 0;
+}
+
+#contact-us > #sketch img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    opacity: 0.8;
 }
 
 @media (max-width: 68rem) {
