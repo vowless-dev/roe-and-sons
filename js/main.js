@@ -16,14 +16,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         itemsToShow.forEach((item, index) => {
         let html = '';
 
-        if (item.type === 'image') {
+                if (item.type === 'image') {
             html = `
                 <a href="${item.src}" 
                    class="gallery-item" 
-                   data-pswp-width="${item.width}" 
-                   data-pswp-height="${item.height}" 
                    target="_blank">
-                    <img src="${item.src}" alt="${item.title}" />
+                    <img src="${item.src}" alt="${item.title}" onload="this.parentElement.setAttribute('data-pswp-width', this.naturalWidth); this.parentElement.setAttribute('data-pswp-height', this.naturalHeight);" />
                     <div class="gallery-item-info">
                         <div class="gallery-item-title">${item.title}</div>
                         <div class="gallery-item-desc">${item.description}</div>

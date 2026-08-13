@@ -1,25 +1,14 @@
 [
     {
         "type": "image",
-        "src": "assets/hero-headstone.png",
-        "width": 800,
-        "height": 1200,
-        "title": "Celtic Cross Restoration",
-        "description": "Full restoration and cleaning of an original 1920s Celtic cross."
+        "src": "assets/gallery/1b.jpeg",
+        "title": "Before",
+        "description": ""
     },
     {
         "type": "image",
-        "src": "https://images.unsplash.com/photo-1598463567843-c90a16086202?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "width": 800,
-        "height": 1200,
-        "title": "Marble Memorial Cleaning",
-        "description": "Careful removal of moss and structural repair."
-    },
-    {
-        "type": "video",
-        "videoUrl": "https://www.youtube.com/embed/TL7OYOHWaYA",
-        "thumbnail": "https://images.unsplash.com/photo-1498677239023-1d07c03036c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "title": "Restoration Process (Video)",
-        "description": "Watch a timelapse of our masonry techniques."
+        "src": "assets/gallery/1a.jpeg",
+        "title": "After",
+        "description": ""
     }
 ]

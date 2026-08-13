@@ -256,7 +256,7 @@ button:active {
 
 .gallery-item-title {
     color: var(--gold-secondary) !important;
-    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 0.3125rem;
 }
