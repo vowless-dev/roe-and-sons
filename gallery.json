@@ -1,14 +1,266 @@
 [
-    {
-        "type": "image",
-        "src": "assets/gallery/1b.jpeg",
-        "title": "Before",
-        "description": ""
-    },
-    {
-        "type": "image",
-        "src": "assets/gallery/1a.jpeg",
-        "title": "After",
-        "description": ""
-    }
+  {
+    "type": "image",
+    "src": "assets/gallery/1b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/1a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/2b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/2a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/3b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/3a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/4b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/4a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/5b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/5a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/6b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/6a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/7b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/7a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/8b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/8a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/9b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/9a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/10b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/10a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/11b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/11a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/12b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/12a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/13b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/13a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/14b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/14a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/15b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/15a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/16b1.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/16b2.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/16b3.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/16b4.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/16b5.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/16b6.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/16b7.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/16a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/17b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/17a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/18b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/18a.jpeg",
+    "title": "After",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/19b.jpeg",
+    "title": "Before",
+    "description": ""
+  },
+  {
+    "type": "image",
+    "src": "assets/gallery/19a.jpeg",
+    "title": "After",
+    "description": ""
+  }
 ]
